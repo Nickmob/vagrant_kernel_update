@@ -21,7 +21,7 @@
       "iso_url": "https://mirror.linux-ia64.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-latest-boot.iso",
       "name": "{{user `image_name`}}",
       "output_directory": "builds",
-      "shutdown_command": "sudo -S /sbin/halt -h -p",
+      "shutdown_command": "echo '{{user `ssh_pass`}}' | sudo -S /sbin/halt -h -p",
       "shutdown_timeout": "5m",
       "ssh_password": "{{user `ssh_pass`}}",
       "ssh_port": 22,
