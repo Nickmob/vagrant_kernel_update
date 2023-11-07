@@ -26,6 +26,14 @@ firewall --disabled
 
 firstboot --disable
 
+# Указываем набор пакетов
+%packages --default
+@^minimal
+@core
+chrony
+sudo
+%end
+
 # Выбираем установку в режиме командной строки
 text
 # Указываем адрес, с которого установщик возьмёт недостающие компоненты
